@@ -1,5 +1,5 @@
 set nocompatible
-filetype off
+filetype on
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -21,6 +21,7 @@ Plugin 'https://github.com/scrooloose/syntastic.git'
 "Plugin 'nathanaelkane/vim-indent-guides'
 
 Plugin 'https://github.com/vim-scripts/bbye.git'
+Plugin 'Valloric/YouCompleteMe'
 
 "Plugin 'https://github.com/tpope/vim-fugitive.git'
 "Plugin 'https://github.com/msanders/snipmate.vim.git'
@@ -29,7 +30,7 @@ Plugin 'https://github.com/vim-scripts/bbye.git'
 Plugin 'https://github.com/ervandew/supertab.git'
 Plugin 'https://github.com/rizzatti/dash.vim.git'
 "Plugin 'https://github.com/kshenoy/vim-signature.git'
-Plugin 'https://github.com/majutsushi/tagbar.git'
+""Bundle 'majutsushi/tagbar'
 
 "Plugin 'https://github.com/sontek/minibufexpl.vim.git'
 "Plugin 'https://github.com/wincent/Command-T.git'
@@ -96,8 +97,6 @@ set showmatch
 :inoremap [ []<ESC>i
 :inoremap " ""<ESC>i
 :inoremap ' ''<ESC>i
-:inoremap $ $$<ESC>i
-
 
 au FileType python set omnifunc=pythoncomplete#Complete
 :let g:SuperTabDefaultCompleteType="context"
@@ -145,18 +144,32 @@ nnoremap <c-p> :bn<CR>
 
 " Recommended settings for Syntastic
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+""set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%{exists('g:loaded_syntastic_plugin')?SyntasticStatuslineFlag():''}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-"let g:syntastic_python_checkers=["flake8", "pep257"]
+
 let g:syntastic_python_checkers=["flake8"]
 
-let  g:syntastic_javascript_checkers=["jshint","jslint"]
+let g:syntastic_javascript_checkers=["jshint","jslint"]
+
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
-let Tlist_Auto_Open=1
+""let Tlist_Auto_Open=1
+
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'                      
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_confirm_extra_conf = 1
+
+
+let g:syntastic_cpp_checkers = ['g++']
+""let g:syntastic_cpp_checkers = ['-std=c++11']
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
+
+set fileencodings=utf-8,gb2312,utf-16,big5
