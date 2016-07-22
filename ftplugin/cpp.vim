@@ -23,15 +23,14 @@ set expandtab
 
 function! TitleInsert()
     call setline(1,"//coding:utf-8")
-    call append(1,'/*')
+    call append(1,'/******************************************')
     call append(2,"Program: ")
     call append(3,"Description: ")
     call append(4,"Shanbo Cheng: scheng@ancestry.com")
     call append(5,"Date: " . strftime("%Y-%m-%d %H:%M:%S"))
     call append(6,"Last modified: " . strftime("%Y-%m-%d %H:%M:%S"))
-    call append(7,"GCC version: 4.7.3")
     call append(7,"Using cpp.vim]]")
-    call append(11,'*/')
+    call append(8,'*******************************************/')
 endfunction
 
 
