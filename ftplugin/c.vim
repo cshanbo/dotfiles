@@ -20,13 +20,14 @@ set expandtab
 
 function! TitleInsert()
 call setline(1,"//coding:utf-8")
-call append(1,'/********************************************')
+call append(1,'/***********************************************************')
 call append(2,"Program: ")
 call append(3,"Description: ")
-call append(4,"Shanbo Cheng: scheng@ancestry.com")
+call append(4,"Shanbo Cheng: cshanbo@gmail.com")
 call append(5,"Date: " . strftime("%Y-%m-%d %H:%M:%S"))
 call append(6,"Last modified: " . strftime("%Y-%m-%d %H:%M:%S"))
-call append(7,'*********************************************/')
+call append(7,"GCC version: 4.9.3")
+call append(8,'***********************************************************/')
 endfunction
 
 function! DateInsert()
@@ -44,3 +45,4 @@ endfunction
 :nmap <silent> <F5> :call CompilRun()<CR>
 :nmap <silent> <C-F5> :call Debug()<CR>
 :nmap <silent> <C-m> o//
+

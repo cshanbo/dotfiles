@@ -75,11 +75,12 @@ set ruler
 
 
 "编码方式
-set encoding=utf8
-set fileencoding=utf8
-set fileencodings=utf8
-set formatoptions+=m
-set formatoptions+=B
+""set encoding=utf8
+""set fileencoding=utf8
+""set fileencodings=utf8
+""set formatoptions+=m
+""set formatoptions+=B
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 
 set tabstop=8
 set softtabstop=4
@@ -162,14 +163,16 @@ let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 ""let Tlist_Auto_Open=1
 
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'                      
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'                      
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_confirm_extra_conf = 1
 
 
 let g:syntastic_cpp_checkers = ['g++']
-""let g:syntastic_cpp_checkers = ['-std=c++11']
-let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_checkers = ['-std=c++11']
+let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
 
-set fileencodings=utf-8,gb2312,utf-16,big5
+
+""set fileencodings=utf-8,gb2312,utf-16,big5
+

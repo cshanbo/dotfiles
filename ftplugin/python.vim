@@ -21,15 +21,19 @@ endfunction
 
 
 function! TitleInsert()
-	call setline(1,"#!/usr/bin/env python")
+	call setline(1,"#!/usr/bin/env python3")
 	call append(1,"# -*- coding:utf-8 -*-")
 	call append(2,"#")
-	call append(3,"# Shanbo Cheng: scheng@ancestry.com")
-	call append(4,"#")
-	call append(5,"# Date: " . strftime("%Y-%m-%d %H:%M:%S"))
-	call append(6,"# Last modified: " . strftime("%Y-%m-%d %H:%M:%S"))
-	call append(7,"")
-	call append(8,"import sys")
+	call append(3,"# Shanbo Cheng: cshanbo@gmail.com")
+	call append(4,"# ")
+	call append(5,"#")
+	call append(6,"# Python release: 2.7.10")
+	call append(7,"#")
+	call append(8,"# Date: " . strftime("%Y-%m-%d %H:%M:%S"))
+	call append(9,"# Last modified: " . strftime("%Y-%m-%d %H:%M:%S"))
+	call append(10,"")
+	call append(11,'"""')
+	call append(12,'"""')
 	
 endfunction
 
