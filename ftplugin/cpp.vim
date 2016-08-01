@@ -1,10 +1,10 @@
-""func! CompilRun()
-""    g++ -std=c++11 % -o /tmp/a.out && /tmp/a.out<CR>
-""
-""
-""
-""
-""endfunc
+"func! CompilRun()
+    "exec "w"
+    "exec "g++ --version"
+    "exec "g++ % -o %<"
+    "exec " ./%<"
+    "exec "del ./%<"
+"endfunc
 
 
 "func! Debug()
@@ -23,15 +23,15 @@ set expandtab
 
 function! TitleInsert()
     call setline(1,"//coding:utf-8")
-    call append(1,'/***********************************************************')
+    call append(1,'/*************************************')
     call append(2,"Program: ")
     call append(3,"Description: ")
-    call append(4,"Shanbo Cheng: cshanbo@gmail.com")
+    call append(4,"Author: cshanbo@gmail.com")
     call append(5,"Date: " . strftime("%Y-%m-%d %H:%M:%S"))
     call append(6,"Last modified: " . strftime("%Y-%m-%d %H:%M:%S"))
     call append(7,"GCC version: 4.9.3")
     call append(7,"Using cpp.vim]]")
-    call append(11,'***********************************************************/')
+    call append(11,'************************************/')
 endfunction
 
 
@@ -99,11 +99,5 @@ set foldmethod=syntax
 "启动vim时关闭折叠代码
 set nofoldenable
 
-""let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
-""let Tlist_Show_One_File=1
-""let Tlist_Exit_OnlyWindow=1
-""let Tlist_Auto_Open=1
-
-nnoremap <silent> <F8> :TlistToggle<CR>
 
 :inoremap , , <ESC>a
