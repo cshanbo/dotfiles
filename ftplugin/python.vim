@@ -21,7 +21,7 @@ endfunction
 
 
 function! TitleInsert()
-	call setline(1,"#!/usr/bin/env python3")
+	call setline(1,"#!/usr/bin/env python")
 	call append(1,"# -*- coding:utf-8 -*-")
 	call append(2,"#")
 	call append(3,"# Shanbo Cheng: cshanbo@gmail.com")
@@ -70,7 +70,7 @@ endfunction
 :nmap <F3> :call CommentBlock()<CR>jA 
 :nmap <F5> :!python3 %<CR>
 :nmap <F6> :!python %<CR>
-:nmap <C-n> iif __name__=='__main__':<Esc>o
+:nmap <C-n> iif __name__ == '__main__':<Esc>o
 :inoremap " """<ESC>o"""<ESC>kA
 :inoremap , , <ESC>a
 

@@ -149,14 +149,6 @@ set statusline+=%#warningmsg#
 set statusline+=%{exists('g:loaded_syntastic_plugin')?SyntasticStatuslineFlag():''}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_python_checkers=["flake8"]
-
-let g:syntastic_javascript_checkers=["jshint","jslint"]
 
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 let Tlist_Show_One_File=1
@@ -168,10 +160,16 @@ let g:ycm_show_diagnostics_ui = 0
 let g:ycm_confirm_extra_conf = 1
 
 
-let g:syntastic_cpp_checkers = ['g++']
-let g:syntastic_cpp_checkers = ['-std=c++11']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers=["flake8"]
+let g:syntastic_javascript_checkers=["jshint","jslint"]
+
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 
 
 ""set fileencodings=utf-8,gb2312,utf-16,big5
