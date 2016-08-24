@@ -67,7 +67,7 @@ endfunction
 :nmap <F3> :call CommentBlock()<CR>jA 
 :nmap <F5> :!python3 %<CR>
 :nmap <F6> :!python %<CR>
-:nmap <C-n> iif __name__=='__main__<Esc>la:<Esc>o
+:nmap <C-n> iif __name__ == '__main__<Esc>la:<Esc>o
 :inoremap " """<ESC>o"""<ESC>kA
 :inoremap , , <ESC>a
 
