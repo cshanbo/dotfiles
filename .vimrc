@@ -30,7 +30,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'https://github.com/ervandew/supertab.git'
 Plugin 'https://github.com/rizzatti/dash.vim.git'
 "Plugin 'https://github.com/kshenoy/vim-signature.git'
-""Bundle 'majutsushi/tagbar'
+Bundle 'majutsushi/tagbar'
 
 "Plugin 'https://github.com/sontek/minibufexpl.vim.git'
 "Plugin 'https://github.com/wincent/Command-T.git'
@@ -150,9 +150,9 @@ set statusline+=%{exists('g:loaded_syntastic_plugin')?SyntasticStatuslineFlag():
 set statusline+=%*
 
 
-let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
+""let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
+""let Tlist_Show_One_File=1
+""let Tlist_Exit_OnlyWindow=1
 ""let Tlist_Auto_Open=1
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'                      
