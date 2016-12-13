@@ -80,12 +80,13 @@ set ruler
 ""set fileencodings=utf8
 ""set formatoptions+=m
 ""set formatoptions+=B
-set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 
-set tabstop=8
+set fileencoding=utf-8,ucs-bom,gb2312,gb18030,gbk,cp936,latin1
+set termencoding=utf-8
+set encoding=utf-8
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-
 :map <c-j> <c-w>j
 :map <c-k> <c-w>k
 :map <c-l> <c-w>l
