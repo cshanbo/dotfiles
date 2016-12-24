@@ -58,14 +58,19 @@ filetype plugin indent on
 " Put your non-Plugin stuff after this line
 
 set number
-colorscheme desert
 filetype plugin indent on
+colorscheme desert 
+""colorscheme molokai
+""let g:molokai_original = 1
 syntax enable
 syntax on
 
-set cursorcolumn
+""set cursorcolumn
 set cursorline
-
+""highlight CursorLine  cterm=bold
+""hi CursorLine ctermbg=8 ctermfg=15
+hi CursorLine term=bold cterm=bold ctermbg=238 guibg=NONE
+hi Visual term=reverse cterm=reverse ctermbg=black
 set backspace=indent,eol,start
 
 set showcmd
@@ -80,13 +85,13 @@ set ruler
 ""set fileencodings=utf8
 ""set formatoptions+=m
 ""set formatoptions+=B
+set fileencodings=utf-8,ucs-bom,gb2312,gb18030,gbk,cp936,latin1                                                                                                                 
+set termencoding=utf-8                                                                                                                                                          
+set encoding=utf-8                                                                                                                                                              
+set tabstop=4                                                                                                                                                                   
+set softtabstop=4                                                                                                                                                               
+set shiftwidth=4          
 
-set fileencoding=utf-8,ucs-bom,gb2312,gb18030,gbk,cp936,latin1
-set termencoding=utf-8
-set encoding=utf-8
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
 :map <c-j> <c-w>j
 :map <c-k> <c-w>k
 :map <c-l> <c-w>l
@@ -149,7 +154,6 @@ set statusline+=%#warningmsg#
 ""set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%{exists('g:loaded_syntastic_plugin')?SyntasticStatuslineFlag():''}
 set statusline+=%*
-
 
 ""let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 ""let Tlist_Show_One_File=1
