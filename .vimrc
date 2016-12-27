@@ -177,6 +177,8 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 
-
+set ignorecase
+set smartcase
+set incsearch
 ""set fileencodings=utf-8,gb2312,utf-16,big5
 
