@@ -11,14 +11,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-scripts/The-NERD-tree'
 
 Plugin 'vim-scripts/VOoM'
-Plugin 'Yggdroot/indentLine'
+"Plugin 'Yggdroot/indentLine'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdcommenter'
 "Plugin "moll/vim-bbye"
 "Plugin "tmhedberg/SimpylFold"
 Plugin 'https://github.com/scrooloose/syntastic.git'
 "Plugin 'vim-scripts/winmanager'
-"Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 Plugin 'https://github.com/vim-scripts/bbye.git'
 Plugin 'Valloric/YouCompleteMe'
@@ -124,7 +124,7 @@ let NERDTreeShowFiles=1
 let NERDTreeShowLineNumbers=1
 auto VimEnter * NERDTree
 
-let g:indentLine_color_term=239
+"let g:indentLine_color_term=239
 
 auto VimEnter * wincmd w
 
