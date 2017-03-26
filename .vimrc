@@ -181,5 +181,6 @@ let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
 ""set fileencodings=utf-8,gb2312,utf-16,big5
 
