@@ -161,6 +161,8 @@ set statusline+=%*
 ""let Tlist_Exit_OnlyWindow=1
 ""let Tlist_Auto_Open=1
 
+let g:tagbar_width = 26
+
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'                      
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_confirm_extra_conf = 1
