@@ -33,6 +33,8 @@ function! TitleInsert()
     call append(9,"")
     call append(10,"'''")
     call append(11,"'''")
+    call append(12,"")
+    call append(13,"from __future__ import print_function, unicode_literals, division")
     
 endfunction
 
