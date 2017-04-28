@@ -163,6 +163,7 @@ set statusline+=%*
 
 let g:tagbar_width = 26
 nmap <F8> :TagbarToggle<CR>
+let g:NERDTreeWinSize=26
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'                      
 let g:ycm_show_diagnostics_ui = 0
