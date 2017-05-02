@@ -160,10 +160,11 @@ set statusline+=%*
 ""let Tlist_Show_One_File=1
 ""let Tlist_Exit_OnlyWindow=1
 ""let Tlist_Auto_Open=1
+nmap <F8> :TagbarToggle<CR>
 
 let g:tagbar_width = 26
-nmap <F8> :TagbarToggle<CR>
-let g:NERDTreeWinSize=26
+let g:NERDTreeWinSize = 26
+let g:voom_tree_width = 26
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'                      
 let g:ycm_show_diagnostics_ui = 0
