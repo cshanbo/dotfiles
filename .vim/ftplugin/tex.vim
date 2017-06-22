@@ -25,3 +25,4 @@ endfunction
 auto VimEnter * :Voom latex
 
 :nmap <silent> <F8> :Voom latex<CR>
+auto VimEnter * wincmd w
